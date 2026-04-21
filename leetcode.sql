@@ -13,3 +13,12 @@ WHERE low_fats = 'Y' AND recyclable = 'Y';
 SELECT name 
 FROM Customer 
 WHERE referee_id != 2 OR referee_id IS NULL;
+
+
+-- LeetCode #595 - Big Countries
+-- Difficulty: Easy
+-- Topics: WHERE, OR, >=
+
+SELECT name, population, area 
+FROM World 
+WHERE area >= 3000000 OR population >= 25000000;
