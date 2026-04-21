@@ -9,3 +9,15 @@ SELECT dept, COUNT(id) FROM employees GROUP BY dept;
 
 -- HAVING query
 SELECT dept, AVG(salary) FROM employees GROUP BY dept HAVING AVG(salary) > 50000;
+
+
+-- JOIN Queries
+-- INNER JOIN: only matching rows
+SELECT employees.name, employees.dept, departments.manager
+FROM employees
+INNER JOIN departments ON employees.dept = departments.dept;
+
+-- LEFT JOIN: all employees even without department info
+SELECT employees.name, employees.dept, departments.manager
+FROM employees
+LEFT JOIN departments ON employees.dept = departments.dept;
