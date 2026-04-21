@@ -21,3 +21,8 @@ INNER JOIN departments ON employees.dept = departments.dept;
 SELECT employees.name, employees.dept, departments.manager
 FROM employees
 LEFT JOIN departments ON employees.dept = departments.dept;
+
+---LEFT INNER JOIN PRACTICE
+select emp.name,emp.dp, dps.flo from emp inner join dps on emp.dp=dps.dp;
+select dps.dp,emp.name from dps left join emp on dps.dp=emp.dp;
+select emp.name, dps.manager from emp inner join dps on emp.dp=dps.dp;
