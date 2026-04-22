@@ -39,3 +39,13 @@ ORDER BY author_id ASC;
 SELECT tweet_id 
 FROM Tweets 
 WHERE LENGTH(content) > 15;
+
+-- LeetCode #1693 - Daily Leads and Partners
+-- Difficulty: Easy
+-- Topics: GROUP BY multiple columns, COUNT DISTINCT, AS
+
+SELECT date_id, make_name,
+COUNT(DISTINCT lead_id) AS unique_leads,
+COUNT(DISTINCT partner_id) AS unique_partners
+FROM DailySales
+GROUP BY date_id, make_name;
