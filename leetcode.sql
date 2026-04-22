@@ -49,3 +49,13 @@ COUNT(DISTINCT lead_id) AS unique_leads,
 COUNT(DISTINCT partner_id) AS unique_partners
 FROM DailySales
 GROUP BY date_id, make_name;
+
+-- LeetCode #1729 - Find Followers Count
+-- Difficulty: Easy
+-- Topics: GROUP BY, COUNT, ORDER BY
+
+SELECT user_id, 
+COUNT(follower_id) AS followers_count
+FROM Followers
+GROUP BY user_id
+ORDER BY user_id ASC;
