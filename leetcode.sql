@@ -59,3 +59,11 @@ COUNT(follower_id) AS followers_count
 FROM Followers
 GROUP BY user_id
 ORDER BY user_id ASC;
+
+-- LeetCode #175 - Combine Two Tables
+-- Difficulty: Easy
+-- Topics: LEFT JOIN
+
+SELECT firstName, lastName, city, state
+FROM Person
+LEFT JOIN Address ON Person.personId = Address.personId;
