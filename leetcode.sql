@@ -75,3 +75,12 @@ LEFT JOIN Address ON Person.personId = Address.personId;
 SELECT EmployeeUNI.unique_id, Employees.name
 FROM Employees
 LEFT JOIN EmployeeUNI ON Employees.id = EmployeeUNI.id;
+
+-- LeetCode #577 - Employee Bonus
+-- Difficulty: Easy
+-- Topics: LEFT JOIN, IS NULL, OR
+
+SELECT Employee.name, Bonus.bonus
+FROM Employee
+LEFT JOIN Bonus ON Employee.empId = Bonus.empId
+WHERE Bonus.bonus < 1000 OR Bonus.bonus IS NULL;
