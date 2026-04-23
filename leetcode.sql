@@ -67,3 +67,11 @@ ORDER BY user_id ASC;
 SELECT firstName, lastName, city, state
 FROM Person
 LEFT JOIN Address ON Person.personId = Address.personId;
+
+-- LeetCode #1378 - Replace Employee ID With The Unique Identifier
+-- Difficulty: Easy
+-- Topics: LEFT JOIN
+
+SELECT EmployeeUNI.unique_id, Employees.name
+FROM Employees
+LEFT JOIN EmployeeUNI ON Employees.id = EmployeeUNI.id;
