@@ -84,3 +84,17 @@ SELECT Employee.name, Bonus.bonus
 FROM Employee
 LEFT JOIN Bonus ON Employee.empId = Bonus.empId
 WHERE Bonus.bonus < 1000 OR Bonus.bonus IS NULL;
+
+-- LeetCode #183 - Customers Who Never Order Anything
+-- Difficulty: Easy
+-- Topics: LEFT JOIN, IS NULL
+
+SELECT Customers.name AS customers
+FROM Customers
+LEFT JOIN Orders ON Customers.id = Orders.customersId
+WHERE Orders.cutomersId is null;
+
+
+
+
+
