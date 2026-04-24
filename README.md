@@ -40,7 +40,8 @@ SQL solutions to LeetCode problems solved independently.
 ## Status
 Actively learning and updating daily.
 
-## Google Sheets Progress
+- ## Google Sheets Progress
 - Basic formulas: SUM, AVERAGE, COUNT, MAX, MIN ✅
 - IF formula for conditional logic ✅
-- Currently learning: VLOOKUP and Pivot Tables
+- VLOOKUP for searching across data ✅
+- Currently learning: Pivot Tables
