@@ -103,5 +103,17 @@ FROM Person p1, Person p2
 WHERE p1.email = p2.email 
   AND p1.id > p2.id;
 
+-- LeetCode #183- Deparment Highest Salary
+-- Difficulty: Easy
+-- Topics: Join, Max, Where
+
+SELECT d.name AS Department, e.name AS Employee, e.salary
+FROM Employee e
+JOIN Department d ON e.departmentId = d.id
+WHERE e.salary = (
+    SELECT MAX(salary)
+    FROM Employee
+    WHERE departmentId = e.departmentId
+);
 
 
