@@ -116,4 +116,24 @@ WHERE e.salary = (
     WHERE departmentId = e.departmentId
 );
 
+-- LeetCode #586- Customer Placing Highest number of orders
+-- Difficulty: Easy
+-- Topics: Group By, Order by, Limit
+
+SELECT customer_number
+FROM orders
+GROUP BY customer_number
+ORDER BY COUNT(order_number) DESC
+LIMIT 1;
+
+
+
+
+
+
+
+
+
+
+
 
