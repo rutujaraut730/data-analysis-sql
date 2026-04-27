@@ -1,48 +1,33 @@
-# Data Analysis SQL Project
+# Data Analysis Portfolio
 
-## About This Project
-This project documents my SQL learning journey from basics to real problem solving.
-It includes practice queries, structured datasets and LeetCode solutions — 
-all written and tested by me as I learn data analysis from scratch.
+## About
+Built during self-study as I work toward becoming a data analyst.
+All projects are independently written and analyzed.
 
-## What's Inside
+## Projects
 
-### tables.sql
-Contains CREATE TABLE and INSERT statements for practice datasets.
-Currently includes employee and department data.
+### 1. Student Performance Analysis (Python + Pandas)
+- Analyzed 20 student records across 3 departments
+- Found Science dept has highest average marks at 90.57
+- Identified 5 failing students and patterns in low performance
+- Tools: Python, Pandas, Google Colab
+- File: student_analysis.ipynb
 
-### queries.sql
-Real analysis queries written during practice sessions. Covers:
-- SELECT and WHERE filtering
-- GROUP BY with aggregate functions
-- HAVING clause for group filtering
-- INNER JOIN and LEFT JOIN
+### 2. Employee & Sales SQL Analysis
+- Written SQL queries for real business questions
+- Covers SELECT, WHERE, GROUP BY, HAVING, JOINs
+- File: queries.sql
 
-### leetcode.sql
-SQL solutions to LeetCode problems solved independently.
-- #1757 - Recyclable and Low Fat Products
-- #584 - Find Customer Referee
-- #595 - Big Countries
+### 3. LeetCode SQL Solutions
+- 11 problems solved independently
+- Covers filtering, aggregation, joins, date conditions
+- File: leetcode.sql
 
-## Skills Being Built
-- SQL (SQLite / MySQL)
-- Data filtering and aggregation
-- Multi table joins
-- Problem solving via LeetCode
-- Google Sheets (coming soon)
-- Python with Pandas (coming soon)
-
-## Tools Used
-- SQLite Online
-- LeetCode
+## Skills
+- SQL (MySQL / SQLite)
+- Python (Pandas)
+- Google Sheets (Pivot Tables, VLOOKUP, Charts)
 - GitHub
 
 ## Status
 Actively learning and updating daily.
-
-## Google Sheets Progress
-- Basic formulas: SUM, AVERAGE, COUNT, MAX, MIN ✅
-- IF formula for conditional logic ✅
-- VLOOKUP for searching across data ✅
-- Pivot Tables for summarizing data ✅
-- Charts and visualization ✅
