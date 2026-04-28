@@ -160,9 +160,20 @@ FROM Activity GROUP BY player_id;
 -- LeetCode #596 - Classes with at least 5 students
 -- Difficulty: Easy
 -- Topics: Group by, Having, Count;
+
 SELECT class FROM Courses GROUP BY class HAVING COUNT(student)>=5;
 
+-- LeetCode #607 - Sales Person 
+-- Difficulty: Easy
+-- Topics: NOT IN, JOIN, WHERE, DISTINCT
 
-
+SELECT name
+FROM SalesPerson
+WHERE sales_id NOT IN (
+    SELECT DISTINCT o.sales_id
+    FROM Orders o
+    JOIN Company c ON o.com_id = c.com_id
+    WHERE c.name = 'RED'
+);
 
 
