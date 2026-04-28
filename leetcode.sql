@@ -157,6 +157,10 @@ GROUP BY Project.project_id;
 SELECT player_id,MIN(event_date) AS first_login
 FROM Activity GROUP BY player_id;
 
+-- LeetCode #596 - Classes with at least 5 students
+-- Difficulty: Easy
+-- Topics: Group by, Having, Count;
+SELECT class FROM Courses GROUP BY class HAVING COUNT(student)>=5;
 
 
 
