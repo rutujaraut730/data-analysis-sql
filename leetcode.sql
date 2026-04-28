@@ -150,7 +150,12 @@ FROM Project
 JOIN Employee ON Project.employee_id = Employee.employee_id
 GROUP BY Project.project_id;
 
+-- LeetCode #511 - Game Analysis I
+-- Difficulty: Easy
+-- Topics:MIN, GROUP BY
 
+SELECT player_id,MIN(event_date) AS first_login
+FROM Activity GROUP BY player_id;
 
 
 
