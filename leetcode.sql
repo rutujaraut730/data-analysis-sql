@@ -176,4 +176,14 @@ WHERE sales_id NOT IN (
     WHERE c.name = 'RED'
 );
 
+-- LeetCode #619 - Biggest Single Number
+-- Difficulty: Easy
+-- Topics: MAX, GROUP BY, HAVING, COUNT, AS
 
+SELECT MAX(num) AS num
+FROM (
+    SELECT num
+    FROM MyNumbers
+    GROUP BY num
+    HAVING COUNT(*) = 1
+) AS single_numbers;
