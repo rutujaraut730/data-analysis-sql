@@ -13,6 +13,12 @@ All projects are independently written and analyzed.
 - Tools: Python, Pandas, Google Colab
 - File: student_analysis.ipynb
 
+  ### 1.1. Student Performance Dashboard (Power BI)
+- Built interactive dashboard with 3 visuals
+- Average marks by Department, Pass/Fail ratio, Marks by City
+- Tools: Power BI Desktop
+- File: student_performance_dashboard.pbix
+
 ### 2. Employee & Sales SQL Analysis
 - Written SQL queries for real business questions
 - Covers SELECT, WHERE, GROUP BY, HAVING, JOINs
