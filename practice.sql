@@ -37,3 +37,8 @@ SELECT genre, AVG(price) AS average_price FROM books GROUP BY genre;
 
 -- Q5: Most expensive book per genre
 SELECT genre, MAX(price) AS max_price FROM books GROUP BY genre;
+
+-- Q6: Genres where total copies sold > 3000
+SELECT genre, SUM(copies_sold) FROM books GROUP BY genre HAVING SUM(copies_sold) > 3000;
+
+
