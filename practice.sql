@@ -28,3 +28,6 @@ SELECT title FROM books WHERE genre = 'Fiction';
 
 -- Q2: Books priced above 350
 SELECT title, price FROM books WHERE price > 350;
+
+-- Q3: Total copies sold per genre
+SELECT genre, SUM(copies_sold) AS total_copies FROM books GROUP BY genre;
