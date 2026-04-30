@@ -41,4 +41,14 @@ SELECT genre, MAX(price) AS max_price FROM books GROUP BY genre;
 -- Q6: Genres where total copies sold > 3000
 SELECT genre, SUM(copies_sold) FROM books GROUP BY genre HAVING SUM(copies_sold) > 3000;
 
+-- Q7: All books sorted by copies sold descending
+SELECT title FROM books ORDER BY copies_sold DESC;
 
+-- Q8: Self Help books with more than 1500 copies sold
+SELECT title, author FROM books WHERE genre = 'Self Help' AND copies_sold > 1500;
+
+-- Q9: Count of books per genre
+SELECT genre, COUNT(book_id) AS book_count FROM books GROUP BY genre;
+
+-- Q10: Genres where average price > 350 AND total copies > 1500
+SELECT genre FROM books GROUP BY genre HAVING AVG(price) > 350 AND SUM(copies_sold) > 1500;
