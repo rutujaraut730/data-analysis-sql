@@ -31,3 +31,6 @@ SELECT title, price FROM books WHERE price > 350;
 
 -- Q3: Total copies sold per genre
 SELECT genre, SUM(copies_sold) AS total_copies FROM books GROUP BY genre;
+
+-- Q4: Average price per genre
+SELECT genre, AVG(price) AS average_price FROM books GROUP BY genre;
