@@ -187,3 +187,13 @@ FROM (
     GROUP BY num
     HAVING COUNT(*) = 1
 ) AS single_numbers;
+
+-- LeetCode #1633 - Percentage of Users Attended a Contest
+-- Difficulty: Easy
+-- Topics: Subquery, COUNT, ROUND, GROUP BY, ORDER BY
+
+SELECT contest_id,
+ROUND(COUNT(user_id) * 100 / (SELECT COUNT(*) FROM Users), 2) AS percentage
+FROM Register
+GROUP BY contest_id
+ORDER BY percentage DESC, contest_id ASC;
