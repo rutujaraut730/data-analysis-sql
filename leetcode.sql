@@ -197,3 +197,20 @@ ROUND(COUNT(user_id) * 100 / (SELECT COUNT(*) FROM Users), 2) AS percentage
 FROM Register
 GROUP BY contest_id
 ORDER BY percentage DESC, contest_id ASC;
+
+-- LeetCode 1280 - Students and Examinations
+-- Difficulty: Easy
+-- Topics: Cross, Left, Group, Order by, And, Count
+
+SELECT 
+    s.student_id,
+    s.student_name,
+    sub.subject_name,
+    COUNT(e.subject_name) AS attended_exams
+FROM Students s
+CROSS JOIN Subjects sub
+LEFT JOIN Examinations e 
+    ON s.student_id = e.student_id 
+    AND sub.subject_name = e.subject_name
+GROUP BY s.student_id, s.student_name, sub.subject_name
+ORDER BY s.student_id, sub.subject_name;
