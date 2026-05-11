@@ -241,3 +241,15 @@ JOIN Activity b
     AND a.activity_type = 'start'
     AND b.activity_type = 'end'
 GROUP BY a.machine_id;
+
+-- LeetCode #1527 - Patients With a Condition
+-- Difficulty: Easy
+-- Topics: WHERE, LIKE, OR
+
+SELECT 
+    patient_id,
+    patient_name,
+    conditions
+FROM Patients
+WHERE conditions LIKE 'DIAB1%'
+   OR conditions LIKE '% DIAB1%';
