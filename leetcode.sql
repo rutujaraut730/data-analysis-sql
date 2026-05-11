@@ -214,3 +214,15 @@ LEFT JOIN Examinations e
     AND sub.subject_name = e.subject_name
 GROUP BY s.student_id, s.student_name, sub.subject_name
 ORDER BY s.student_id, sub.subject_name;
+
+-- LeetCode #1581 - Customer Who Visited but Did Not Make Any Transactions
+-- Difficulty: Easy
+-- Topics: LEFT JOIN, IS NULL, GROUP BY, COUNT
+
+SELECT 
+    v.customer_id,
+    COUNT(v.visit_id) AS count_no_trans
+FROM Visits v
+LEFT JOIN Transactions t ON v.visit_id = t.visit_id
+WHERE t.transaction_id IS NULL
+GROUP BY v.customer_id;
