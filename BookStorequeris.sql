@@ -24,7 +24,7 @@ INSERT INTO books VALUES (10, 'Thinking Fast and Slow', 'History', 499, 850, 'Da
 -- Bookstore Practice Queries
 
 -- Q1: All Fiction books
-SELECT title FROM books WHERE genre = 'Fiction';
+SELECT title FROM books WHERE title='Fiction';
 
 -- Q2: Books priced above 350
 SELECT title, price FROM books WHERE price > 350;
