@@ -21,7 +21,7 @@ INSERT INTO books VALUES (9, 'Sapiens', 'History', 599, 1100, 'Yuval Noah Harari
 INSERT INTO books VALUES (10, 'Thinking Fast and Slow', 'History', 499, 850, 'Daniel Kahneman');
 
 
--- Bookstore Practice Queries
+-- BookStore Practice Queries
 
 -- Q1: All Fiction books
 SELECT title FROM books WHERE title='Fiction';
